@@ -13,11 +13,33 @@
 <meta property="og:site_name" content="cdroad的小屋">
 <meta property="og:description" content="数组数组的声明12345678910111213int [] arr &#x3D; new int[3];&#x2F;*	左边：		int:说明数组中的元素类型是int		[]：说明这是一个数组		arr:数组名称	右边：		new:为当前数组申请内存空间		int:说明数组中的元素类型是int		[]：说明这是一个数组		3:数组长度，数组中的元素个数		  数组的访问形式12arr[0]&#x2F;&#x2F;数组的访问从0开始，如">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/assets/image-20230225201702683.png">
+<meta property="og:image" content="http://example.com/assets/image-20230225202935639.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227170513440.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227170701521.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227170757106.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227170911767.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227171048758.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227171346626.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227171528078.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227172218603.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227172100742.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227172152009.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227172315163.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227172737592.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227173757787.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227173910382.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227173948000.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227185953369.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227190324963.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227190810788.png">
+<meta property="og:image" content="http://example.com/assets/image-20230227191508308.png">
 <meta property="article:published_time" content="2023-02-23T02:12:10.000Z">
-<meta property="article:modified_time" content="2023-02-23T02:12:40.796Z">
+<meta property="article:modified_time" content="2023-02-28T02:05:08.000Z">
 <meta property="article:author" content="cdroad">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/assets/image-20230225201702683.png">
   
     <link rel="alternate" href="/atom.xml" title="cdroad的小屋" type="application/atom+xml">
   
@@ -64,10 +86,10 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -363,11 +385,57 @@
 <li>构造方法用private修饰</li>
 <li>成员用public static修饰</li>
 </ol>
+<h1 id="Date类"><a href="#Date类" class="headerlink" title="Date类"></a>Date类</h1><h2 id="Date类概述和构造方法"><a href="#Date类概述和构造方法" class="headerlink" title="Date类概述和构造方法"></a>Date类概述和构造方法</h2><p>Data代表了一个特定的事件，精确到毫秒。</p>
+<p>public Data() &#x2F;&#x2F;分配一个Data对象，并初始化，以便它代表它被分配的时间，精确到毫秒。<br>public Data(long date) &#x2F;&#x2F;分配一个Data对象，并将其初始化为表示从标准基准时间起指定的毫秒数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">my</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Date</span> <span class="variable">d1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        System.out.println(d1); <span class="comment">//Sat Feb 25 19:59:21 HKT 2023</span></span><br><span class="line">        <span class="type">long</span> <span class="variable">date</span> <span class="operator">=</span> <span class="number">1000</span>*<span class="number">60</span>*<span class="number">60</span>;</span><br><span class="line">        <span class="type">Date</span> <span class="variable">d2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>(date);<span class="comment">//Thu Jan 01 09:00:00 HKT 1970</span></span><br><span class="line">        System.out.println(d2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Date类的常用方法"><a href="#Date类的常用方法" class="headerlink" title="Date类的常用方法"></a>Date类的常用方法</h2><p>public long getTime(); &#x2F;&#x2F;获取的是日期对象从1970年1月1日00：00：00到现在的毫秒。</p>
+<p>public void setTime(long time); &#x2F;&#x2F;设置时间,给的是毫秒值。</p>
+<h2 id="SimpleDateFormat类"><a href="#SimpleDateFormat类" class="headerlink" title="SimpleDateFormat类"></a>SimpleDateFormat类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">my</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ParseException &#123;</span><br><span class="line">        <span class="type">Date</span> <span class="variable">d</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        <span class="type">SimpleDateFormat</span> <span class="variable">sfd</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy年mm月dd日 HH:mm:ss&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> sfd.format(d);</span><br><span class="line">        System.out.println(s);<span class="comment">//2023年08月25日 20:08:23</span></span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;-------&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">ss</span> <span class="operator">=</span> <span class="string">&quot;2048-08-09 11:11:11&quot;</span>;</span><br><span class="line">        <span class="type">SimpleDateFormat</span> <span class="variable">sdf2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-mm-dd HH:mm:ss&quot;</span>);<span class="comment">//这里一定要跟ss的格式一样，不然会报ParseException</span></span><br><span class="line">        <span class="type">Date</span> <span class="variable">dd</span> <span class="operator">=</span> sdf2.parse(ss);</span><br><span class="line">        System.out.println(dd);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="Calendar-类"><a href="#Calendar-类" class="headerlink" title="Calendar 类"></a>Calendar 类</h1><p><img src="/./assets/image-20230225201702683.png" alt="image-20230225201702683"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">my</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ParseException &#123;</span><br><span class="line">        <span class="type">Date</span> <span class="variable">d</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        <span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> DateUtils.dateToString(d, <span class="string">&quot;yyyy年-MM月-dd日 HH:mm:ss&quot;</span>);</span><br><span class="line">        System.out.println(s1);</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> DateUtils.dateToString(d, <span class="string">&quot;yyyy年-MM月-dd日&quot;</span>);</span><br><span class="line">        System.out.println(s2);</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> DateUtils.dateToString(d, <span class="string">&quot;HH:mm:ss&quot;</span>);</span><br><span class="line">        System.out.println(s3);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;2048-08-12 12:12:12&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">d1</span> <span class="operator">=</span> DateUtils.stringToDate(s,<span class="string">&quot;yyyy-mm-dd HH:mm:ss&quot;</span>);</span><br><span class="line">        System.out.println(d1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Calendar类"><a href="#Calendar类" class="headerlink" title="Calendar类"></a>Calendar类</h2><p><img src="/./assets/image-20230225202935639.png" alt="image-20230225202935639"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">my</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ParseException &#123;</span><br><span class="line">        <span class="type">Calendar</span> <span class="variable">c</span> <span class="operator">=</span> Calendar.getInstance();</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">year</span> <span class="operator">=</span> c.get(Calendar.YEAR);</span><br><span class="line">        <span class="type">int</span> <span class="variable">month</span> <span class="operator">=</span> c.get(Calendar.MONTH)+<span class="number">1</span>;<span class="comment">//因为月份是从0开始的，所以要加1</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">date</span> <span class="operator">=</span> c.get(Calendar.DATE);</span><br><span class="line"></span><br><span class="line">        System.out.println(year);</span><br><span class="line">        System.out.println(month);</span><br><span class="line">        System.out.println(date);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><p><img src="/./assets/image-20230227170513440.png" alt="image-20230227170513440"></p>
+<p>Java分error和异常两种情况，如果是error表示非常严重的错误，一般不捕获。异常就是能接收捕获的。</p>
+<p>异常类和不是RuntimeException的子类的任何类都是检查异常。</p>
+<p>RuntimeException是Java虚拟机的正常操作期间可以抛出的异常的超类。其子类是未经检查的异常。</p>
+<h2 id="JVM的默认处理方案"><a href="#JVM的默认处理方案" class="headerlink" title="JVM的默认处理方案"></a>JVM的默认处理方案</h2><p><img src="/./assets/image-20230227170701521.png" alt="image-20230227170701521"></p>
+<h2 id="try…catch处理异常"><a href="#try…catch处理异常" class="headerlink" title="try…catch处理异常"></a>try…catch处理异常</h2><p><img src="/./assets/image-20230227170757106.png" alt="image-20230227170757106"></p>
+<p><img src="/./assets/image-20230227170911767.png" alt="image-20230227170911767"></p>
+<h2 id="Throwable的成员用法"><a href="#Throwable的成员用法" class="headerlink" title="Throwable的成员用法"></a>Throwable的成员用法</h2><p><img src="/./assets/image-20230227171048758.png" alt="Throwable的成员用法"></p>
+<p><img src="/./assets/image-20230227171346626.png" alt="image-20230227171346626"></p>
+<p>一般printStackTrace是最全的，一般用这个就可以了。</p>
+<h2 id="编译时异常和运行时异常的区别"><a href="#编译时异常和运行时异常的区别" class="headerlink" title="编译时异常和运行时异常的区别"></a>编译时异常和运行时异常的区别</h2><p><img src="/./assets/image-20230227171528078.png" alt="image-20230227171528078"></p>
+<h2 id="throws"><a href="#throws" class="headerlink" title="throws"></a>throws</h2><p><img src="/./assets/image-20230227172218603.png" alt="image-20230227172218603"></p>
+<p>运行时异常如果通过在方法后面跟throws来处理，java仅仅会只是把异常情况抛出，并不会真正进行处理，并且也不会往下运行。真正的处理还得是try-catch。</p>
+<p><img src="/./assets/image-20230227172100742.png" alt="image-20230227172100742"></p>
+<p><img src="/./assets/image-20230227172152009.png" alt="image-20230227172152009"></p>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><p><img src="/./assets/image-20230227172315163.png" alt="image-20230227172315163"></p>
+<p><img src="/./assets/image-20230227172737592.png" alt="image-20230227172737592"></p>
+<h1 id="Collection-集合体系结构"><a href="#Collection-集合体系结构" class="headerlink" title="Collection 集合体系结构"></a>Collection 集合体系结构</h1><p>集合的特点：提供一种存储空间可变的存储模型，存储的数据容量额可以随时发生改变。</p>
+<h2 id="集合类体系结构"><a href="#集合类体系结构" class="headerlink" title="集合类体系结构"></a>集合类体系结构</h2><p>在Java中又分为单列集合和双列集合。</p>
+<p><img src="/./assets/image-20230227173757787.png" alt="image-20230227173757787"></p>
+<p>Collection中的List实现可重复集合，Set实现的是不可重复的集合。</p>
+<p><img src="/./assets/image-20230227173910382.png" alt="image-20230227173910382"></p>
+<p><img src="/./assets/image-20230227173948000.png"></p>
+<p><img src="/./assets/image-20230227185953369.png" alt="image-20230227185953369"></p>
+<h2 id="Collection集合常用的方法"><a href="#Collection集合常用的方法" class="headerlink" title="Collection集合常用的方法"></a>Collection集合常用的方法</h2><p><img src="/./assets/image-20230227190324963.png" alt="image-20230227190324963"></p>
+<h2 id="集合的遍历"><a href="#集合的遍历" class="headerlink" title="集合的遍历"></a>集合的遍历</h2><p><img src="/./assets/image-20230227190810788.png" alt="image-20230227190810788"></p>
+<p><img src="/./assets/image-20230227191508308.png" alt="image-20230227191508308"></p>
+<p>Student类的Collection范例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Student</span><span class="params">(String name,<span class="type">int</span> age)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayListStudent</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        Collection&lt;Student&gt; s = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Student&gt;();</span><br><span class="line">        <span class="type">Student</span> <span class="variable">a</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;linmouren&quot;</span>,<span class="number">12</span>);</span><br><span class="line">        <span class="type">Student</span> <span class="variable">b</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;linmouren1&quot;</span>,<span class="number">13</span>);</span><br><span class="line">        <span class="type">Student</span> <span class="variable">c</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;linmouren&quot;</span>,<span class="number">14</span>);</span><br><span class="line">        s.add(a);</span><br><span class="line">        s.add(b);</span><br><span class="line">        s.add(c);</span><br><span class="line">        Iterator&lt;Student&gt; IS = s.iterator();</span><br><span class="line">        <span class="keyword">while</span> (IS.hasNext())&#123;</span><br><span class="line">            <span class="type">Student</span> <span class="variable">st</span> <span class="operator">=</span> IS.next();</span><br><span class="line">            System.out.println(<span class="string">&quot;hello&quot;</span> + <span class="string">&quot; &quot;</span> + st.getAge()+st.getName());</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/23/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="cleggzad30000ucifebqy7f0b" data-title="Java学习笔记" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/02/23/Java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="cleggzad30000ucifebqy7f0b" data-title="Java学习笔记" class="article-share-link">Teilen</a>
       
       
       
@@ -380,7 +448,7 @@
 <nav id="article-nav">
   
     <a href="/2023/02/23/%E5%88%9D%E4%B8%AD%E6%95%B0%E5%AD%A6%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">Neuer</strong>
       <div class="article-nav-title">
         
           初中数学查漏补缺
@@ -390,7 +458,7 @@
   
   
     <a href="/2023/02/23/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B8%8E%E5%A4%87%E4%BB%BD/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">Älter</strong>
       <div class="article-nav-title">Hexo博客搭建与备份</div>
     </a>
   
@@ -428,9 +496,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/09/">September 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
     </div>
   </div>
 
@@ -438,9 +506,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/09/04/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2023/02/23/%E5%88%9D%E4%B8%AD%E6%95%B0%E5%AD%A6%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/">初中数学查漏补缺</a>
