@@ -114,7 +114,8 @@ backup:
   type: git
   message: 'Backup blog source'  # 提交备注
   repository:
-    github: https://github.com/cdroad/cdroad.github.io.git,hexo
     # 格式：仓库地址, 分支名（你用来存源码的分支）
+    github: https://github.com/cdroad/cdroad.github.io.git,hexo
+
     gitee: https://gitee.com/imugicha/cdroad.github.io.git,hexo
 
