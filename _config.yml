@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -118,4 +118,5 @@ backup:
     github: https://github.com/cdroad/cdroad.github.io.git,hexo
 
     gitee: https://gitee.com/imugicha/cdroad.github.io.git,hexo
+  onDeploy: true  # 部署时自动备份
 
